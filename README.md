@@ -51,18 +51,19 @@ Your assignment is to use Built-In java classes to:
 1. Look up the latitude and longitude coordinates in any online map you can find via Google.
 1. Screenshot the map and add it into the **images** folder of this project.
 1. Last add image markdown below this line to load your map image (Hint: Example image Markdown is just a couple lines above this).
+ ![](images/JavaAssignmentGPS.jpg)
 
 ## PART 3 - Code Scanning and Interpretation
 
 * Look at the getHiddenSecrets method and identify the following parts by editing this README.md and providing your answers:
-    * What is the **access modifer** (e.g. public, private, protected)?
-    * Is it a **Class method** or an **object Instance method**, how do you know?
-    * What is its **return data-type**?
-    * Does it require any **arguments** to call it, and if so, how many **parameters** and of what **data-type**?
+    * What is the **access modifer** (e.g. public, private, protected)? -- public
+    * Is it a **Class method** or an **object Instance method**, how do you know? -- I *think* that getHiddenSecrets is an object Instance method because it is a subroutine of the HiddenSecrets class
+    * What is its **return data-type**? -- static void seems to indicate no return type, but calling the method returns many strings from the System.out.format() in line 23
+    * Does it require any **arguments** to call it, and if so, how many **parameters** and of what **data-type**? --Yes, it requires one argument of a File
 * Scan line by line through the code and try to determine how it works?
-    * What is familiar to you?
-    * What is not familiar to you?
-    * Do the **for** loops make sense, and if so, tell me what you think they do?
+    * What is familiar to you? -- The format specifiers are familiar to me as well as the for loops. I also think I recognize the argument of line 21 as a for loop that is indexing through each directory that the metadata package found. 
+    * What is not familiar to you? Both try and catch are unfamiliar to me. 
+    * Do the **for** loops make sense, and if so, tell me what you think they do? Line 21 indexes through each directory, then line 22 indexes through each tag for every directory that exists. It then prints the following information for each tag in each directory; name, tagname, and description. Line 27's for loop looks for the error that returned a boolean value in the if statement of the line above. For each error found it prints an error message.
 
 ## PART 4 - Turn in
 
